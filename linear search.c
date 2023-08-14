@@ -2,23 +2,23 @@
 
 int main()
 {
-    int a[7],i,n,p;
-    for(i=0;i<7;i++)
-    {
-       printf("Enter value :");
-       scanf("%d",&a[i]);
-    }
+    int i,n,l;
+    printf("Enter length of array ");
+    scanf("%d", &l);
+    int a[l];
+    printf("Enter values");
+    for(i=0;i<l;i++)
+        scanf("%d",&a[i]);
     
-      printf("Enter n :");
-      scanf("%d",&n);
-    for(i=0;i<7;i++)
-    {
+    printf("Enter n :");
+    scanf("%d",&n);
+    for(i=0;i<l;i++)
        if(a[i]==n)
-       {
-         printf("Element present in array");
-           p = i+1;
-      }
-    }
-    printf("position is %d",p);
+           break;
+    
+    if (i<l)
+        printf("element present in array\n position is %d",i+1);
+    else
+        printf("element does not present in array");
     return 0;
 }
